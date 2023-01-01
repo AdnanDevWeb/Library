@@ -8,7 +8,25 @@
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
-    <nav class="w-full h-10 bg-black"></nav>
+<body class="relative">
+    <nav class="w-full min-h-10 bg-neutral-800 ">
+        <h1 class="text-white text-[40px] p-3 text-center"><span class="text-rose-400 text-[50px]">L</span>ibrary</h1>
+    </nav>
+
+    <button class="bg-teal-900 text-white p-3 rounded-xl m-5 font-semibold">Create Book <span class="font-bold text-lg cursor-pointer">+</span></button>
+
+    <form class=" absolute bg-teal-900 max-w-[270px] h-[400px] rounded-xl top-3/4 left-[35%] z-20 ">
+        <label for="bookName">The name of your book</label>
+        <input type="text"name="bookName" required id="bookName" placeholder="The name of your book" required>
+
+        <label for="authorName" aria-required="true">The name of the author</label>
+        <input type="text" name="auhtorName" id="authorName" required placeholder="Author">
+
+        <label for="pageInput">The total pages of the book</label>
+        <input type="text" name="pageInput" id="pageInput" placeholder="Pages">
+        
+        <input type="checkbox" name="checkboxInput" id="checkboxInput">
+        <label for="checkboxInput">Have you read it ?</label>
+    </form>
 </body>
 </html>
