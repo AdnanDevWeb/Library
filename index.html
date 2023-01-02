@@ -8,25 +8,47 @@
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="relative">
+<body class="bg-teal-500">
     <nav class="w-full min-h-10 bg-neutral-800 ">
         <h1 class="text-white text-[40px] p-3 text-center"><span class="text-rose-400 text-[50px]">L</span>ibrary</h1>
     </nav>
 
-    <button class="bg-teal-900 text-white p-3 rounded-xl m-5 font-semibold">Create Book <span class="font-bold text-lg cursor-pointer">+</span></button>
+    <button class="bg-teal-900 text-white p-3 rounded-xl m-5 font-semibold" data-createBookBtn>Create Book <span class="font-bold text-lg cursor-pointer">+</span></button>
 
-    <form class=" absolute bg-teal-900 max-w-[270px] h-[400px] rounded-xl top-3/4 left-[35%] z-20 ">
-        <label for="bookName">The name of your book</label>
-        <input type="text"name="bookName" required id="bookName" placeholder="The name of your book" required>
+    <form class="border-4 shadow-lg  shadow-black border-black opacity-0 grid absolute bg-teal-900 w-[350px] min-h-[450px] left-11 rounded-xl  z-[-20] p-6">
+        <div>
+            <label for="bookName label" class="label">The name of your book</label>
+            <input class="p-2 rounded-lg " type="text"name="bookName" required id="bookName" placeholder="The name of your book" required>
+        </div>
+  
+        <div>
+            <label for="authorName" aria-required="true label" class="label">The name of the author</label>
+            <input class="p-2 rounded-lg  " type="text" name="auhtorName" id="authorName" required placeholder="Author">
+        </div>
 
-        <label for="authorName" aria-required="true">The name of the author</label>
-        <input type="text" name="auhtorName" id="authorName" required placeholder="Author">
-
-        <label for="pageInput">The total pages of the book</label>
-        <input type="text" name="pageInput" id="pageInput" placeholder="Pages">
+        <div>
+            <label for="pageInput" class="label" class="label">The total pages of the book</label>
+            <input class="p-2 rounded-lg" type="number" name="pageInput" id="pageInput" placeholder="Pages" required>
+        </div>
         
-        <input type="checkbox" name="checkboxInput" id="checkboxInput">
-        <label for="checkboxInput">Have you read it ?</label>
+        <div>
+            <label class="label" for="checkboxInput">Have you read it ?</label>
+            <input class="p-2 rounded-lg" type="checkbox" name="checkboxInput" id="checkboxInput" style="scale: 2; margin-left: 10px;">
+        </div>
+       
+
+        <button type="submit" class="text-white bg-slate-800 w-24 rounded-lg mt-4">Submit</button>
     </form>
+
+    <section id="booksSection" class="p-5 justify-center grid gap-[25px] grid-cols-[repeat(auto-fill,minmax(200px,300px))]">
+        <!-- <div class="books w-72 gap-7 p-5 bg-teal-900 flex flex-col justify-evenly align-middle min-h-60 rounded-3xl">
+            <p class="text-white text-xl  text-center font-semibold" id="title">"Book"</p>
+            <p class="text-white text-xl  text-center italic" id="author">Author</p>
+            <p class="text-white text-xl  text-center" id="pages">15 pages</p>
+            <button id="isReaded" class="readedBtn">Not read</button>
+            <button id="remove" class="bg-stone-900 text-white p-4 rounded-3xl text-xl ">Remove</button>
+        </div> -->
+
+    </section>
 </body>
 </html>

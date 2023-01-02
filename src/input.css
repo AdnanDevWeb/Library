@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.label{
+    @apply text-white text-2xl block mb-2 
+}
+.readedBtn{
+    @apply bg-orange-300 text-white p-4 rounded-3xl text-xl 
+}
+.unreadedBtn{
+    @apply  bg-red-900  text-white p-4 rounded-3xl text-xl 
+}
+form{
+    transition: .3s ease-in-out;
+}
+#booksSection{
+    transition: .3s ease-in-out;
+}
+.formReveal{
+    @apply opacity-100 block z-50
+}
+.blur{
+    filter: blur(3px);
+}
